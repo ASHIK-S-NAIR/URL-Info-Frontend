@@ -31,7 +31,7 @@ button {
   font-weight: 500;
   background-image: linear-gradient(99deg, rgb(87, 108, 180), rgb(232,100,112));
   border: 2px solid rgb(87, 108, 180);
-  border-radius: 8px;
+  border-radius: 5px;
   color: #fff;
 }
 
@@ -41,25 +41,59 @@ button {
   color: rgb(87, 108, 180);
 }
 
-/* nav section start */
-.nav-wrap {
+/* home section start */
+
+.home-section{
+ min-height: 100vh;
+}
+
+.home-wrap{
+  padding-top: 13em;
+  height: 100%;
+}
+
+.home-header{
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgb(38,25,90);
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 4.375rem;
+  margin-bottom: 0.5em;
+}
+
+.home-subheader{
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: rgb(120,120,120);
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 3.5em;
+}
+
+.home-url-form{
+  width: 60%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 5.5em;
+  margin: 0 auto;
+  /* border: 1px solid red; */
 }
 
-.nav-logo-h1{
-  color: rgb(87, 108, 180);
+.home-url-form-input{
+  width: 78%;
+  border: 2px solid rgb(235,237,240);
+  border-radius: 5px 0 0 5px;
+  padding-left: 1.5em;
 }
 
-.nav-cta-signup{
-  margin-left: 1em;
+.home-url-form-input::placeholder{
+  color: rgb(163,169,181);
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-.nav-cta-signup span{
-  /* font-weight: 300; */
-  font-size: 0.9rem;
+.home-cta-getInsights{
+  width: 22%;
+  border-radius: 0 5px 5px 0;
 }
-
-/* nav section end */
+/* home section end */
