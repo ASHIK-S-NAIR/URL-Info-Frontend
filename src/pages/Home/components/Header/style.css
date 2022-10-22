@@ -1,0 +1,85 @@
+/* header section start */
+
+.header-section{
+    min-height: 100vh;
+    margin-bottom: 3em;
+   }
+   
+   .header-wrap{
+     padding-top: 13em;
+     height: 100%;
+   }
+   
+   .header-header{
+     font-size: 3.5rem;
+     font-weight: 700;
+     color: rgb(38,25,90);
+     width: 50%;
+     text-align: center;
+     margin: 0 auto;
+     line-height: 4.375rem;
+     margin-bottom: 0.5em;
+   }
+   
+   .header-subheader{
+     font-size: 1.125rem;
+     font-weight: 400;
+     color: rgb(89, 89, 89);
+     line-height: 1.75rem;
+     text-align: center;
+     margin: 0 auto;
+     margin-bottom: 3.5em;
+   }
+   
+   .header-subheader span{
+     color: rgb(87, 108, 180);
+     font-weight: 600;
+   }
+   
+   .header-url-form{
+     width: 60%;
+     display: flex;
+     margin: 0 auto;
+     margin-bottom: 1em;
+   }
+   
+   .header-url-form-input{
+     width: 78%;
+     border: 2px solid rgb(229,231,235);
+     border-radius: 5px 0 0 5px;
+     padding-left: 1.5em;
+     color: rgb(0,0,0);
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 1.5rem;
+   }
+   
+   .header-url-form-input::placeholder{
+     color: rgb(163,169,181);
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 1.5rem;
+   }
+   
+   .header-cta-getInsights{
+     width: 22%;
+     border-radius: 0 5px 5px 0;
+     font-size: 1.1rem;
+   }
+   
+   .header-features-ul{
+     display: grid;
+     grid-template-columns: auto auto;
+     column-gap: 2em;
+     width: max-content;
+     margin: 0 auto;
+   }
+   
+   .header-features-li{
+     font-size: 1rem;
+     font-weight: 400;
+     color: rgb(79, 79, 79);
+     line-height: 1.5rem;
+   }
+
+   /* header section end */

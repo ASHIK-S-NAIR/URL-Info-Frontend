@@ -17,6 +17,9 @@
   
   .nav-logo-h1{
     color: rgb(87, 108, 180);
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 1.625rem;
   }
   
   .nav-cta-signup{

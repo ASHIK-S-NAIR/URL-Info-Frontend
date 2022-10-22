@@ -1,0 +1,55 @@
+/* login section start */
+
+.login-section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-top: 5em;
+}
+
+.login-wrap {
+  width: 47%;
+  padding: 3em 2.7em;
+  color: rgba(0, 0, 0, 0.85);
+  box-shadow: 10px 25px 15px -10px rgba(0, 0, 0, 0.2),
+    -10px 0px 15px -10px rgba(0, 0, 0, 0.2);
+}
+
+.login-thirdHeader {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.375rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2em;
+  font-family: var(--secondary-font);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-input {
+  background-color: rgb(248, 248, 248);
+  border: none;
+  margin-bottom: 0.6em;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 0.8em;
+  color: rgba(0, 0, 0, 0.85);
+  font-family: var(--secondary-font);
+}
+
+.login-form-input::placeholder {
+  color: rgb(173, 178, 188);
+}
+
+.login-form-cta {
+  font-size: 1.1rem;
+  margin-top: 1.5em;
+  font-family: var(--secondary-font);
+}
+
+/* singup section end */

@@ -1,0 +1,71 @@
+/* signup section start */
+
+.signup-section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-top: 5em;
+}
+
+.signup-wrap {
+  width: 47%;
+  padding: 3em 2.7em;
+  color: rgba(0, 0, 0, 0.85);
+  box-shadow: 10px 25px 15px -10px rgba(0, 0, 0, 0.2),
+    -10px 0px 15px -10px rgba(0, 0, 0, 0.2);
+}
+
+.signup-thirdHeader {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.375rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2em;
+  font-family: var(--secondary-font);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form-input {
+  background-color: rgb(248, 248, 248);
+  border: none;
+  margin-bottom: 0.6em;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 0.8em;
+  color: rgba(0, 0, 0, 0.85);
+  font-family: var(--secondary-font);
+}
+
+.signup-form-input::placeholder {
+  color: rgb(173, 178, 188);
+}
+
+.signup-form-info{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgb(51, 51, 51);
+    font-family: var(--secondary-font);
+}
+
+.signup-form-info span{
+    color: rgb(232,100,112);
+}
+
+.signup-form-cta{
+    font-size: 1.1rem;
+    margin-top: 1.5em;
+    font-family: var(--secondary-font);
+}
+
+.signup-form-info a{
+    color: rgb(58,160,255);
+    font-weight: 500;
+}
+/* signup section end */

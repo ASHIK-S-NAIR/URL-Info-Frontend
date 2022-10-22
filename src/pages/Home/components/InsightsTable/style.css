@@ -1,0 +1,45 @@
+/* InsightsTable section start */
+
+.insightsTable-wrap {
+  padding-top: 2em;
+}
+
+.insightsTable-secondHeader {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+  color: rgb(38, 25, 90);
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 0.8em;
+}
+
+.insightsTable-table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid rgb(229,231,235);
+    margin-bottom: 3em;
+}
+
+.insightsTable-table-thead{
+    border-bottom: 2px solid rgb(229,231,235);
+}
+
+.insightsTable-table-head-value {
+    font-weight: 600;
+    color: rgb(38, 25, 90);
+    font-size: 1rem;
+    text-align: left;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .insightsTable-table-body-value {
+    font-weight: 400;
+    color: rgb(13, 12, 12);
+    font-size: 0.8rem;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid rgb(231, 232, 235);
+  }
+/* InsightsTable section end */
