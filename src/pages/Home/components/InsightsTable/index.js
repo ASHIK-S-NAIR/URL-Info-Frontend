@@ -6,6 +6,11 @@ const InsightsTable = () => {
     <section className="insightsTable-section">
       <div className="wrap insightsTable-wrap">
         <h2 className="insightsTable-secondHeader">Insights Table</h2>
+        <div className="insightsTable-cta-sec">
+          <button className="btn-cta btn-cta-outline insightsTable-cta">
+            Delete All Insights
+          </button>
+        </div>
         <table className="insightsTable-table">
           <thead className="insightsTable-table-thead">
             <tr>

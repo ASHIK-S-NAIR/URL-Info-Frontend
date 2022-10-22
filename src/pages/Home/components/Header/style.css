@@ -83,3 +83,13 @@
    }
 
    /* header section end */
+
+   .header-errorMessage-sec {
+    width: 100%;
+  }
+  
+  .header-errorMessage {
+    text-align: center;
+    font-size: 0.9rem;
+    color: red;
+  }
