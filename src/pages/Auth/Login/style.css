@@ -52,4 +52,14 @@
   font-family: var(--secondary-font);
 }
 
-/* singup section end */
+/* login section end */
+
+.login-errorMessage-sec{
+  width: 100%;
+}
+
+.login-errorMessage{
+  text-align: center;
+  font-size: 0.9rem;
+  color: red;
+}

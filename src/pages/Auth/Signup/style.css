@@ -46,26 +46,36 @@
   color: rgb(173, 178, 188);
 }
 
-.signup-form-info{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
-    color: rgb(51, 51, 51);
-    font-family: var(--secondary-font);
+.signup-form-info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgb(51, 51, 51);
+  font-family: var(--secondary-font);
 }
 
-.signup-form-info span{
-    color: rgb(232,100,112);
+.signup-form-info span {
+  color: rgb(232, 100, 112);
 }
 
-.signup-form-cta{
-    font-size: 1.1rem;
-    margin-top: 1.5em;
-    font-family: var(--secondary-font);
+.signup-form-cta {
+  font-size: 1.1rem;
+  margin-top: 1.5em;
+  font-family: var(--secondary-font);
 }
 
-.signup-form-info a{
-    color: rgb(58,160,255);
-    font-weight: 500;
+.signup-form-info a {
+  color: rgb(58, 160, 255);
+  font-weight: 500;
 }
 /* signup section end */
+
+.signup-errorMessage-sec {
+  width: 100%;
+}
+
+.signup-errorMessage {
+  text-align: center;
+  font-size: 0.9rem;
+  color: red;
+}
