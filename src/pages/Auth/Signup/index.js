@@ -18,10 +18,12 @@ const Signup = () => {
 
   const navigate = useNavigate();
 
+  // handleChange - Function to handle the change in input fields
   const handleChange = (name) => (event) => {
     setValues({ ...values, [name]: event.target.value });
   };
 
+  // onSubmit - Function to submit the signup form
   const onSubmit = async (event) => {
     event.preventDefault();
     setValues({ ...values, loading: "loading" });
@@ -86,7 +88,9 @@ const Signup = () => {
   };
 
   return (
-    <section className="signup-section">
+    <section className
+    // Signup section starts
+    ="signup-section">
       <div className="wrap signup-wrap">
         <h3 className="signup-thirdHeader">Sign Up Now</h3>
         {error && <ErrorMessage error={error} />}
@@ -125,6 +129,8 @@ const Signup = () => {
         </form>
       </div>
     </section>
+    // Signup section end
+
   );
 };
 

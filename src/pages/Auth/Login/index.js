@@ -5,7 +5,6 @@ import ErrorMessage from "../Components/ErrorMessage";
 
 import "./style.css";
 
-
 const Login = () => {
   const [values, setValues] = useState({
     email: "",
@@ -19,10 +18,12 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  // handleChange - Function to handle the change in input fields
   const handleChange = (name) => (event) => {
     setValues({ ...values, [name]: event.target.value });
   };
 
+  // onSubmit - Function to submit the login form
   const onSubmit = async (event) => {
     event.preventDefault();
 
@@ -83,6 +84,7 @@ const Login = () => {
   };
 
   return (
+    // Login section starts
     <section className="login-section">
       <div className="wrap login-wrap">
         <h3 className="login-thirdHeader">Login Now</h3>
@@ -108,6 +110,7 @@ const Login = () => {
         </form>
       </div>
     </section>
+    // Login section ends
   );
 };
 
