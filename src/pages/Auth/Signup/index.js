@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login, signup, authenticate } from "api/auth";
 import "./style.css";
-import ErrorMessage from "../Components/ErrorMessage";
+import ErrorMessage from "../../components/ErrorMessage";
 
 const Signup = () => {
   const [values, setValues] = useState({

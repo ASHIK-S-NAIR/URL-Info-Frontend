@@ -3,7 +3,6 @@ import { getAllInsights } from "api/insigt";
 import React, { useState } from "react";
 import Header from "./components/Header";
 import InsightsTable from "./components/InsightsTable";
-import "./style.css";
 
 const Home = () => {
   const [urlValues, setUrlValues] = useState({
@@ -21,6 +20,7 @@ const Home = () => {
 
   const { user, token } = isAuthenticated();
 
+  // loadInsights = Function to load all Insights from backend server.
   const loadInsights = async () => {
     try {
       const data = await getAllInsights(token, user._id);
@@ -32,7 +32,7 @@ const Home = () => {
           error: data.error,
         });
       }
-      
+
       return setInsightsArray({
         ...insightsArray,
         insights: data,
@@ -52,11 +52,14 @@ const Home = () => {
 
   return (
     <section className="home-section">
+      {/* Header section  */}
       <Header
         urlValues={urlValues}
         setUrlValues={setUrlValues}
         loadInsights={loadInsights}
       />
+
+      {/* InsightsTable section only for authenticated users */}
       {isAuthenticated() && (
         <InsightsTable
           insightsArray={insightsArray}

@@ -4,6 +4,7 @@ import { isAuthenticated } from "api/auth";
 import { getInsightUrl } from "api/insigt";
 import validUrl from "valid-url";
 import "./style.css";
+import ErrorMessage from "pages/components/ErrorMessage";
 
 const Header = ({ urlValues, setUrlValues, loadInsights }) => {
   const { url, error, loading, success } = urlValues;
@@ -12,10 +13,12 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
 
   const { user, token } = isAuthenticated();
 
+  // handleChange - Function to handle the change in input fields
   const handleChange = (name) => (event) => {
     setUrlValues({ ...urlValues, [name]: event.target.value });
   };
 
+  // onSubmit - Function to send the entered url to the backend server
   const onSubmit = async (event) => {
     event.preventDefault();
     if (isAuthenticated()) {
@@ -64,15 +67,8 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
     }
   };
 
-  const erroMessage = () => {
-    return (
-      <div className="header-errorMessage-sec">
-        <p className="header-errorMessage">{error}</p>
-      </div>
-    );
-  };
-
   return (
+    // Header section starts
     <section className="header-section">
       <div className="wrap header-wrap">
         <h1 className="header-header">Supercharge your Content Marketing</h1>
@@ -80,7 +76,7 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
           We've built a simple <span>growth marketing suite</span> so you can
           improve <br /> website traffic with valuable insights and guidance.
         </h3>
-        {error && erroMessage()}
+        {error && <ErrorMessage error={error} />}
         <div className="header-url-sec">
           <form className="header-url-form">
             <input
@@ -104,6 +100,7 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
         </ul>
       </div>
     </section>
+    // Header section ends
   );
 };
 

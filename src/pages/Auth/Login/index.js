@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login, authenticate } from "api/auth";
-import ErrorMessage from "../Components/ErrorMessage";
+import ErrorMessage from "../../components/ErrorMessage";
 
 import "./style.css";
 

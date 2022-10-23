@@ -3,9 +3,10 @@ import { deleteAllInsights, deleteInsight, updateInsight } from "api/insigt";
 import React, { useEffect } from "react";
 import "./style.css";
 
-const InsightsTable = ({ insightsArray, setInsightsArray, loadInsights }) => {
+const InsightsTable = ({ insightsArray, loadInsights }) => {
   const { user, token } = isAuthenticated();
 
+  // onClickDeleteAllInsights - Function to call the deleteAllInsights API function
   const onClickDeleteAllInsights = async () => {
     const data = await deleteAllInsights(token, user._id);
     if (data.status === "error") {
@@ -14,6 +15,7 @@ const InsightsTable = ({ insightsArray, setInsightsArray, loadInsights }) => {
     return loadInsights();
   };
 
+  // onClickDeleteInsight- Function to call the deleteInsight API function
   const onClickDeleteInsight = async (insightId) => {
     const data = await deleteInsight(token, user._id, insightId);
     if (data.status === "error") {
@@ -22,6 +24,7 @@ const InsightsTable = ({ insightsArray, setInsightsArray, loadInsights }) => {
     return loadInsights();
   };
 
+  // onClickAddToFav - Function to call the updateInsight API function
   const onClickAddToFav = async (insightId, favourite) => {
     const data = await updateInsight(token, user._id, insightId, favourite);
     if (data.status === "error") {
@@ -35,6 +38,7 @@ const InsightsTable = ({ insightsArray, setInsightsArray, loadInsights }) => {
   }, []);
 
   return (
+    // InsightsTable section starts
     <section className="insightsTable-section">
       <div className="wrap insightsTable-wrap">
         <h2 className="insightsTable-secondHeader">Insights Table</h2>
@@ -150,6 +154,7 @@ const InsightsTable = ({ insightsArray, setInsightsArray, loadInsights }) => {
         </table>
       </div>
     </section>
+    // InsightsTable section ends
   );
 };
 
