@@ -33,8 +33,8 @@
 }
 
 .insightsTable-table-head-value {
-    font-weight: 600;
-    color: rgb(38, 25, 90);
+    font-weight: 700;
+    color: rgb(232, 100, 112);
     font-size: 1rem;
     text-align: left;
     padding-top: 0.5em;
@@ -44,9 +44,32 @@
   .insightsTable-table-body-value {
     font-weight: 400;
     color: rgb(13, 12, 12);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     padding-top: 0.4em;
     padding-bottom: 0.4em;
     border-bottom: 1px solid rgb(231, 232, 235);
+  }
+
+  .insightsTable-table-body-li{
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+
+  .insightsTable-table-body-a{
+    color: rgb(38, 25, 90);
+    font-size: 0.75rem;
+  }
+
+  .insightsTable-table-body-cta-sec{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.75em;
+    margin: 0 1em;
+  }
+
+  .insightsTable-table-body-cta{
+    font-size: 0.7rem;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
   }
 /* InsightsTable section end */

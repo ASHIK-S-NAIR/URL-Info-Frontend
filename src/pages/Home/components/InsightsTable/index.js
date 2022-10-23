@@ -1,13 +1,48 @@
-import React from "react";
+import { isAuthenticated } from "api/auth";
+import { deleteAllInsights, deleteInsight, updateInsight } from "api/insigt";
+import React, { useEffect } from "react";
 import "./style.css";
 
-const InsightsTable = () => {
+const InsightsTable = ({ insightsArray, setInsightsArray, loadInsights }) => {
+  const { user, token } = isAuthenticated();
+
+  const onClickDeleteAllInsights = async () => {
+    const data = await deleteAllInsights(token, user._id);
+    if (data.status === "error") {
+      return console.log("Failed to delete all insights");
+    }
+    return loadInsights();
+  };
+
+  const onClickDeleteInsight = async (insightId) => {
+    const data = await deleteInsight(token, user._id, insightId);
+    if (data.status === "error") {
+      return console.log("Failed to delete insights");
+    }
+    return loadInsights();
+  };
+
+  const onClickAddToFav = async (insightId, favourite) => {
+    const data = await updateInsight(token, user._id, insightId, favourite);
+    if (data.status === "error") {
+      return console.log("Failed to update insights");
+    }
+    return loadInsights();
+  };
+
+  useEffect(() => {
+    loadInsights();
+  }, []);
+
   return (
     <section className="insightsTable-section">
       <div className="wrap insightsTable-wrap">
         <h2 className="insightsTable-secondHeader">Insights Table</h2>
         <div className="insightsTable-cta-sec">
-          <button className="btn-cta btn-cta-outline insightsTable-cta">
+          <button
+            className="btn-cta btn-cta-outline insightsTable-cta"
+            onClick={onClickDeleteAllInsights}
+          >
             Delete All Insights
           </button>
         </div>
@@ -23,21 +58,94 @@ const InsightsTable = () => {
             </tr>
           </thead>
           <tbody className="insightsTable-table-tbody">
-            <tr>
-              <td className="insightsTable-table-body-value">example.com</td>
-              <td className="insightsTable-table-body-value">148</td>
-              <td className="insightsTable-table-body-value">false</td>
-              <td className="insightsTable-table-body-value">
-                https://example-1.com,https://example-2.com,https://example-3.com,
-              </td>
-              <td className="insightsTable-table-body-value">
-                https://example.com/image-name.png,https://example.com/image-name2.png
-              </td>
-              <td className="insightsTable-table-body-value">
-                <button>Remove</button>
-                <button>Add-to-Fav</button>
-              </td>
-            </tr>
+            {insightsArray.insights.length !== 0 &&
+              insightsArray.insights.map((insightItem, index) => {
+                return (
+                  <tr key={index}>
+                    <td className="insightsTable-table-body-value">
+                      <a
+                        href={insightItem.domainName}
+                        className="insightsTable-table-body-a"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {insightItem.domainName}
+                      </a>
+                    </td>
+                    <td className="insightsTable-table-body-value">
+                      {insightItem.wordCount}
+                    </td>
+                    <td className="insightsTable-table-body-value">
+                      {insightItem.favourite === true ? "True" : "False"}
+                    </td>
+                    <td className="insightsTable-table-body-value">
+                      <ol className="insightsTable-table-body-ul">
+                        {insightItem.webLinks.map((webLinkItem, index) => {
+                          return (
+                            <li
+                              key={index}
+                              className="insightsTable-table-body-li"
+                            >
+                              <a
+                                href={webLinkItem}
+                                className="insightsTable-table-body-a"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {webLinkItem}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ol>
+                    </td>
+                    <td className="insightsTable-table-body-value">
+                      <ol className="insightsTable-table-body-ul">
+                        {insightItem.mediaLinks.map((mediaLinkItem, index) => {
+                          return (
+                            <li
+                              key={index}
+                              className="insightsTable-table-body-li"
+                            >
+                              <a
+                                href={mediaLinkItem}
+                                className="insightsTable-table-body-a"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {mediaLinkItem}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ol>
+                    </td>
+                    <td className="insightsTable-table-body-value">
+                      <div className="insightsTable-table-body-cta-sec">
+                        <button
+                          className="btn-cta btn-cta-outline insightsTable-table-body-cta"
+                          onClick={() => onClickDeleteInsight(insightItem._id)}
+                        >
+                          Remove
+                        </button>
+                        <button
+                          className="btn-cta btn-cta-outline insightsTable-table-body-cta"
+                          onClick={() =>
+                            onClickAddToFav(
+                              insightItem._id,
+                              !insightItem.favourite
+                            )
+                          }
+                        >
+                          {insightItem.favourite === true
+                            ? "Remove Fav"
+                            : "Add Fav"}
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
           </tbody>
         </table>
       </div>

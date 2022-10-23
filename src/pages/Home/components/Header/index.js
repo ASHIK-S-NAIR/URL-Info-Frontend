@@ -1,11 +1,14 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { isAuthenticated } from "api/auth";
 import { getInsightUrl } from "api/insigt";
-import React from "react";
 import validUrl from "valid-url";
 import "./style.css";
 
-const Header = ({ urlValues, setUrlValues, setInsights }) => {
+const Header = ({ urlValues, setUrlValues, loadInsights }) => {
   const { url, error, loading, success } = urlValues;
+
+  const navigate = useNavigate();
 
   const { user, token } = isAuthenticated();
 
@@ -15,46 +18,49 @@ const Header = ({ urlValues, setUrlValues, setInsights }) => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setUrlValues({ ...urlValues, loading: "loading" });
+    if (isAuthenticated()) {
+      setUrlValues({ ...urlValues, loading: "loading" });
 
-    if (!url) {
-      return setUrlValues({
-        ...urlValues,
-        loading: "",
-        success: false,
-        error: "Fill in the URL field",
-      });
-    }
-    if (!validUrl.isUri(url)) {
-      return setUrlValues({
-        ...urlValues,
-        loading: "",
-        success: false,
-        error: "Enter a valid URL",
-      });
-    }
-
-    try {
-      var data = await getInsightUrl(token, user._id, url);
-
-      if (data.status === "error") {
+      if (!url) {
         return setUrlValues({
           ...urlValues,
           loading: "",
           success: false,
-          error: data.error,
+          error: "Fill in the URL field",
+        });
+      }
+      if (!validUrl.isUri(url)) {
+        return setUrlValues({
+          ...urlValues,
+          loading: "",
+          success: false,
+          error: "Enter a valid URL",
         });
       }
 
-      return console.log("data", data);
-      // return setIn
-    } catch (error) {
-      return setUrlValues({
-        ...urlValues,
-        loading: "",
-        success: false,
-        error: error.message,
-      });
+      try {
+        var data = await getInsightUrl(token, user._id, url);
+
+        if (data.status === "error") {
+          return setUrlValues({
+            ...urlValues,
+            loading: "",
+            success: false,
+            error: data.error,
+          });
+        }
+
+        return loadInsights();
+      } catch (error) {
+        return setUrlValues({
+          ...urlValues,
+          loading: "",
+          success: false,
+          error: error.message,
+        });
+      }
+    } else {
+      return navigate("/login");
     }
   };
 

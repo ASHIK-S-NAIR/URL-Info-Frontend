@@ -26,6 +26,14 @@ export const login = async (email, password) => {
   }
 };
 
+export const logout = () => {
+  if (typeof window !== "undefined") {
+    localStorage.removeItem("urlInfo_jwt");
+  }
+
+  return true;
+};
+
 export const authenticate = (data) => {
   if (typeof window !== "undefined") {
     localStorage.setItem("urlInfo_jwt", JSON.stringify(data));
