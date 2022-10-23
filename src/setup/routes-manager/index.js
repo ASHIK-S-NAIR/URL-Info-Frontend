@@ -4,6 +4,7 @@ import Nav from "pages/components/Nav";
 import Home from "pages/Home";
 import Login from "pages/Auth/Login";
 import Signup from "pages/Auth/Signup";
+import PNF from "pages/PNF";
 
 const Router = () => {
   return (
@@ -13,7 +14,7 @@ const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="*" element={<p>Page not found</p>} />
+        <Route path="*" element={<PNF />} />
       </Routes>
     </BrowserRouter>
   );
