@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login, authenticate } from "api/auth";
+import ErrorMessage from "../Components/ErrorMessage";
 
 import "./style.css";
+
 
 const Login = () => {
   const [values, setValues] = useState({
@@ -80,18 +82,11 @@ const Login = () => {
     }
   };
 
-  const erroMessage = () => {
-    return (
-      <div className="login-errorMessage-sec">
-        <p className="login-errorMessage">{error}</p>
-      </div>
-    );
-  };
   return (
     <section className="login-section">
       <div className="wrap login-wrap">
         <h3 className="login-thirdHeader">Login Now</h3>
-        {error && erroMessage()}
+        {error && <ErrorMessage error={error} />}
         <form className="login-form">
           <input
             type="email"

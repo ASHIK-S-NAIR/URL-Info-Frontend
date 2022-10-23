@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login, signup, authenticate } from "api/auth";
 import "./style.css";
+import ErrorMessage from "../Components/ErrorMessage";
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -84,18 +85,11 @@ const Signup = () => {
     }
   };
 
-  const erroMessage = () => {
-    return (
-      <div className="signup-errorMessage-sec">
-        <p className="signup-errorMessage">{error}</p>
-      </div>
-    );
-  };
   return (
     <section className="signup-section">
       <div className="wrap signup-wrap">
         <h3 className="signup-thirdHeader">Sign Up Now</h3>
-        {error && erroMessage()}
+        {error && <ErrorMessage error={error} />}
         <form className="signup-form">
           <input
             type="text"

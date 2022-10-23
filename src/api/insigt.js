@@ -1,6 +1,7 @@
 import axios from "axios";
 import { API } from "../setup/backend-manager";
 
+// getInsightUrl - Function to handle getInsightUrl API, API to cget url insights and store the insight details inside insight collection.
 export const getInsightUrl = async (token, userId, url) => {
   try {
     const { data } = await axios.post(
@@ -16,6 +17,7 @@ export const getInsightUrl = async (token, userId, url) => {
   }
 };
 
+// getAllInsights - Function to handle getAllInsights API, API to gell all insights from insights collection.
 export const getAllInsights = async (token, userId) => {
   try {
     const { data } = await axios.get(`${API}/insight/${userId}`, {
@@ -27,6 +29,7 @@ export const getAllInsights = async (token, userId) => {
   }
 };
 
+// deleteInsight - Function to handle deleteInsight API, API to delete an insight from insights collection.
 export const deleteInsight = async (token, userId, insightId) => {
   try {
     const { data } = await axios.delete(
@@ -41,7 +44,7 @@ export const deleteInsight = async (token, userId, insightId) => {
   }
 };
 
-// delete all insights
+// deleteAllInsight - Function to handle deleteALlInsight API, API to delete all insights from insights collection.
 export const deleteAllInsights = async (token, userId) => {
   try {
     const { data } = await axios.delete(`${API}/insight/${userId}`, {
@@ -53,7 +56,7 @@ export const deleteAllInsights = async (token, userId) => {
   }
 };
 
-// delete all insights
+// updateInsight - Function to handle updateInsight API, API to update an insight inside insights collection.
 export const updateInsight = async (token, userId, insightId, favourite) => {
   try {
     const { data } = await axios.put(
