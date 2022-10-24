@@ -39,7 +39,7 @@ const InsightsTable = ({ insightsArray, loadInsights }) => {
 
   return (
     // InsightsTable section starts
-    <section className="insightsTable-section">
+    <section className="insightsTable-section" >
       <div className="wrap insightsTable-wrap">
         <h2 className="insightsTable-secondHeader">Insights Table</h2>
         <div className="insightsTable-cta-sec">

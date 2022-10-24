@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import { isAuthenticated } from "api/auth";
 import { getAllInsights } from "api/insigt";
-import React, { useState } from "react";
 import Header from "./components/Header";
 import InsightsTable from "./components/InsightsTable";
 

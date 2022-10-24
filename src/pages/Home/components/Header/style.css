@@ -41,6 +41,7 @@
      display: flex;
      margin: 0 auto;
      margin-bottom: 1em;
+     justify-content: space-between;
    }
    
    .header-url-form-input{
@@ -53,6 +54,10 @@
      font-weight: 400;
      line-height: 1.5rem;
    }
+
+   .header-url-form-input.loading{
+    width: 72%;
+   }
    
    .header-url-form-input::placeholder{
      color: rgb(163,169,181);
@@ -62,9 +67,15 @@
    }
    
    .header-cta-getInsights{
-     width: 22%;
+    width: 22%;
      border-radius: 0 5px 5px 0;
      font-size: 1.1rem;
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .header-cta-getInsights.loading{
+    width: 28%;
    }
    
    .header-features-ul{
@@ -83,13 +94,3 @@
    }
 
    /* header section end */
-
-   .header-errorMessage-sec {
-    width: 100%;
-  }
-  
-  .header-errorMessage {
-    text-align: center;
-    font-size: 0.9rem;
-    color: red;
-  }

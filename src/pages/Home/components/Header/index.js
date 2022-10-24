@@ -5,6 +5,7 @@ import { getInsightUrl } from "api/insigt";
 import validUrl from "valid-url";
 import "./style.css";
 import ErrorMessage from "pages/components/ErrorMessage";
+import Loading from "pages/components/Loading";
 
 const Header = ({ urlValues, setUrlValues, loadInsights }) => {
   const { url, error, loading, success } = urlValues;
@@ -53,6 +54,13 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
           });
         }
 
+        setUrlValues({
+          ...urlValues,
+          loading: "",
+          success: true,
+          error: "",
+        })
+
         return loadInsights();
       } catch (error) {
         return setUrlValues({
@@ -87,10 +95,13 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
               onChange={handleChange("url")}
             />
             <button
-              className="btn-cta header-cta-getInsights"
+              className={`btn-cta header-cta-getInsights ${
+                loading ? "loading" : ""
+              }`}
               onClick={onSubmit}
             >
               Get insights
+              {loading && <Loading />}
             </button>
           </form>
         </div>
