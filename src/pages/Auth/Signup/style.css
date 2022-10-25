@@ -36,7 +36,7 @@
   margin-bottom: 0.6em;
   font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 1.375;
   padding: 0.8em;
   color: rgba(0, 0, 0, 0.85);
   font-family: var(--secondary-font);
@@ -49,13 +49,18 @@
 .signup-form-info {
   font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 1.375rem;
   color: rgb(51, 51, 51);
   font-family: var(--secondary-font);
 }
 
 .signup-form-info span {
-  color: rgb(232, 100, 112);
+  color: var(--primary-purple);
+}
+
+.signup-form-info a {
+  color: var(--primary-blue);
+  font-weight: 500;
 }
 
 .signup-form-cta {
@@ -64,18 +69,37 @@
   font-family: var(--secondary-font);
 }
 
-.signup-form-info a {
-  color: rgb(58, 160, 255);
-  font-weight: 500;
+/* tablet screen starts */
+@media screen and (max-width: 768px) {
+  .signup-wrap {
+    width: 88%;
+  }
+
+  .signup-form-input {
+    line-height: 1.8rem;
+    margin-bottom: 0.8em;
+  }
+
+  .signup-form-cta {
+    margin-bottom: 0.5em;
+  }
 }
+
+/* tablet screen ends */
+
+/* mobile screen ends */
+
+@media screen and (max-width: 500px) {
+  .signup-wrap {
+    width: 92%;
+    padding: 3em 1.2em;
+  }
+
+  .signup-form-info {
+    font-size: 0.875rem;
+  }
+}
+
+/*mobile screen ends */
+
 /* signup section end */
-
-.signup-errorMessage-sec {
-  width: 100%;
-}
-
-.signup-errorMessage {
-  text-align: center;
-  font-size: 0.9rem;
-  color: red;
-}

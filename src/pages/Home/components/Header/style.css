@@ -1,96 +1,159 @@
 /* header section start */
 
-.header-section{
-    min-height: 100vh;
-    margin-bottom: 3em;
-   }
-   
-   .header-wrap{
-     padding-top: 13em;
-     height: 100%;
-   }
-   
-   .header-header{
-     font-size: 3.5rem;
-     font-weight: 700;
-     color: rgb(38,25,90);
-     width: 50%;
-     text-align: center;
-     margin: 0 auto;
-     line-height: 4.375rem;
-     margin-bottom: 0.5em;
-   }
-   
-   .header-subheader{
-     font-size: 1.125rem;
-     font-weight: 400;
-     color: rgb(89, 89, 89);
-     line-height: 1.75rem;
-     text-align: center;
-     margin: 0 auto;
-     margin-bottom: 3.5em;
-   }
-   
-   .header-subheader span{
-     color: rgb(87, 108, 180);
-     font-weight: 600;
-   }
-   
-   .header-url-form{
-     width: 60%;
-     display: flex;
-     margin: 0 auto;
-     margin-bottom: 1em;
-     justify-content: space-between;
-   }
-   
-   .header-url-form-input{
-     width: 78%;
-     border: 2px solid rgb(229,231,235);
-     border-radius: 5px 0 0 5px;
-     padding-left: 1.5em;
-     color: rgb(0,0,0);
-     font-size: 1rem;
-     font-weight: 400;
-     line-height: 1.5rem;
-   }
+.header-section {
+  min-height: 100vh;
+  margin-bottom: 3em;
+}
 
-   .header-url-form-input.loading{
-    width: 72%;
-   }
-   
-   .header-url-form-input::placeholder{
-     color: rgb(163,169,181);
-     font-size: 1rem;
-     font-weight: 400;
-     line-height: 1.5rem;
-   }
-   
-   .header-cta-getInsights{
-    width: 22%;
-     border-radius: 0 5px 5px 0;
-     font-size: 1.1rem;
-     display: flex;
-     justify-content: space-between;
-   }
+.header-wrap {
+  padding-top: 13em;
+  height: 100%;
+}
 
-   .header-cta-getInsights.loading{
-    width: 28%;
-   }
-   
-   .header-features-ul{
-     display: grid;
-     grid-template-columns: auto auto;
-     column-gap: 2em;
-     width: max-content;
-     margin: 0 auto;
-   }
-   
-   .header-features-li{
-     font-size: 1rem;
-     font-weight: 400;
-     color: rgb(79, 79, 79);
-     line-height: 1.5rem;
-   }
+.header-header {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgb(38, 25, 90);
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 4.375rem;
+  margin-bottom: 0.5em;
+}
 
-   /* header section end */
+.header-subheader {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: rgb(89, 89, 89);
+  line-height: 1.75rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 3.5em;
+}
+
+.header-subheader span {
+  color: rgb(87, 108, 180);
+  font-weight: 600;
+}
+
+.header-url-form {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  justify-content: space-between;
+}
+
+.header-url-form-input {
+  width: 78%;
+  border: 2px solid rgb(229, 231, 235);
+  border-radius: 5px 0 0 5px;
+  padding-left: 1.5em;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.header-url-form-input.loading {
+  width: 72%;
+}
+
+.header-url-form-input::placeholder {
+  color: rgb(163, 169, 181);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.header-cta-getInsights {
+  width: 22%;
+  border-radius: 0 5px 5px 0;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-cta-getInsights.loading {
+  width: 28%;
+}
+
+.header-features-ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2em;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.header-features-li {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(79, 79, 79);
+  line-height: 1.5rem;
+}
+
+/* tablet screen starts */
+@media screen and (max-width: 768px) {
+  .header-header {
+    font-size: 2.25rem;
+    line-height: 2.875rem;
+    margin-bottom: 1em;
+  }
+
+  .header-url-form {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.8em;
+  }
+
+  .header-url-form-input {
+    width: 100%;
+    line-height: 3rem;
+    border-radius: 5px;
+  }
+
+  .header-cta-getInsights {
+    width: 100%;
+    justify-content: center;
+    border-radius: 5px;
+  }
+}
+
+/* tablet screen ends */
+
+/* mobile screen ends */
+
+@media screen and (max-width: 500px) {
+
+  .header-wrap{
+    padding-top: 15em;
+  }
+
+  .header-header{
+    width: 100%;
+    margin-bottom: 1.2em;
+  }
+
+  .header-subheader-br{
+    display: none;
+  }
+
+  .header-url-form {
+    width: 100%;
+  }
+
+  .header-url-form-input{
+    padding-left: 0.8em;
+  }
+
+  .header-features-li{
+    font-size: 0.875rem;
+  }
+
+}
+
+/*mobile screen ends */
+
+/* header section end */

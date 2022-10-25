@@ -39,7 +39,7 @@ const InsightsTable = ({ insightsArray, loadInsights }) => {
 
   return (
     // InsightsTable section starts
-    <section className="insightsTable-section" >
+    <section className="insightsTable-section">
       <div className="wrap insightsTable-wrap">
         <h2 className="insightsTable-secondHeader">Insights Table</h2>
         <div className="insightsTable-cta-sec">
@@ -152,6 +152,107 @@ const InsightsTable = ({ insightsArray, loadInsights }) => {
               })}
           </tbody>
         </table>
+        <div className="insightsTable-table-mob">
+          {insightsArray.insights.length !== 0 &&
+            insightsArray.insights.map((insightItem, index) => {
+              return (
+                <div className="insightsTable-table-item" key={index}>
+                  <div className="insightsTable-table-item-sec">
+                    <h3 className="insightsTable-table-item-head">
+                      Domain Name
+                    </h3>
+                    <p className="insightsTable-table-item-value">
+                      {insightItem.domainName}
+                    </p>
+                  </div>
+                  <div className="insightsTable-table-item-sec">
+                    <h3 className="insightsTable-table-item-head">Actions</h3>
+                    <div className="insightsTable-table-item-cta-sec">
+                      <button
+                        className="btn-cta btn-cta-outline insightsTable-table-item-cta"
+                        onClick={() => onClickDeleteInsight(insightItem._id)}
+                      >
+                        Remove
+                      </button>
+                      <button
+                        className="btn-cta btn-cta-outline insightsTable-table-item-cta"
+                        onClick={() =>
+                          onClickAddToFav(
+                            insightItem._id,
+                            !insightItem.favourite
+                          )
+                        }
+                      >
+                        {insightItem.favourite === true
+                          ? "Remove Fav"
+                          : "Add Fav"}
+                      </button>
+                    </div>
+                  </div>
+                  <div className="insightsTable-table-item-sec">
+                    <h3 className="insightsTable-table-item-head">
+                      Word Count
+                    </h3>
+                    <p className="insightsTable-table-item-value">
+                      {insightItem.wordCount}
+                    </p>
+                  </div>
+                  <div className="insightsTable-table-item-sec">
+                    <h3 className="insightsTable-table-item-head">Favourite</h3>
+                    <p className="insightsTable-table-item-value">
+                      {insightItem.favourite === true ? "True" : "False"}
+                    </p>
+                  </div>
+                  <div className="insightsTable-table-item-sec">
+                    <h3 className="insightsTable-table-item-head">Web Links</h3>
+                    <ol className="insightsTable-table-item-ol">
+                      {insightItem.webLinks.map((webLinkItem, index) => {
+                        return (
+                          <li
+                            className="insightsTable-table-item-li"
+                            key={index}
+                          >
+                            <a
+                              href={webLinkItem}
+                              className="insightsTable-table-item-a"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {webLinkItem}
+                            </a>
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  </div>
+                  <div className="insightsTable-table-item-sec">
+                    <h3 className="insightsTable-table-item-head">
+                      Media Links
+                    </h3>
+                    <ol className="insightsTable-table-item-ol">
+                      {insightItem.mediaLinks.map((mediaLinkItem, index) => {
+                        return (
+                          <li
+                            className="insightsTable-table-item-li"
+                            key={index}
+                          >
+                            <a
+                              href={mediaLinkItem}
+                              className="insightsTable-table-item-a"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {mediaLinkItem}
+                            </a>
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
       </div>
     </section>
     // InsightsTable section ends

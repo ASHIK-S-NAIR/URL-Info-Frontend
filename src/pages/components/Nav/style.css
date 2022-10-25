@@ -45,8 +45,28 @@
 }
 
 .nav-cta-signup span {
-  /* font-weight: 300; */
   font-size: 0.9rem;
 }
+
+/* tablet screen starts */
+@media screen and (max-width: 768px) {
+  .nav-section {
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+
+  .nav-cta-section{
+    display: none;
+  }
+
+  .nav-toggle-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* tablet screen ends */
 
 /* nav section end */

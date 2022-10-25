@@ -11,19 +11,28 @@ const Nav = () => {
     // Nav section starts
     <nav className="nav-section">
       <div className="wrap nav-wrap">
-        <Link to="/">
-          <div className="nav-logo-sec">
+        <div className="nav-logo-sec">
+          <Link to="/">
             <img className="nav-logo-img" src={LogoSvg} alt="SuiteJar" />
-            <div className="nav-logo-info">
+          </Link>
+          <div className="nav-logo-info">
+            <Link to="/">
               <h1 className="nav-logo-h1">SuiteJar</h1>
-              <a href="https://growth.cx/" className="nav-logo-a">
-                by growth.cx
-              </a>
-            </div>
+            </Link>
+            <a href="https://growth.cx/" className="nav-logo-a">
+              by growth.cx
+            </a>
           </div>
-        </Link>
+        </div>
+
         {isAuthenticated() ? <AuthenticatedUsers /> : <NonAuthenticatedUsers />}
+        <div className="nav-toggle-sec">
+          <div className="nav-toggle-bar nav-toggle-bar-first"></div>
+          <div className="nav-toggle-bar nav-toggle-bar-second"></div>
+          <div className="nav-toggle-bar nav-toggle-bar-third"></div>
+        </div>
       </div>
+      {isAuthenticated() ? <AuthenticatedUsers /> : <NonAuthenticatedUsers />}
     </nav>
     // Nav section ends
   );

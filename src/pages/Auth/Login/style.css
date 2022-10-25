@@ -54,6 +54,39 @@
   justify-content: center;
 }
 
+/* tablet screen starts */
+@media screen and (max-width: 768px) {
+  .login-wrap {
+    width: 88%;
+  }
+
+  .login-form-input {
+    line-height: 1.8rem;
+    margin-bottom: 0.8em;
+  }
+
+  .login-form-cta {
+    margin-bottom: 0.5em;
+  }
+}
+
+/* tablet screen ends */
+
+/* mobile screen ends */
+
+@media screen and (max-width: 500px) {
+  .login-wrap {
+    width: 92%;
+    padding: 3em 1.2em;
+  }
+
+  .login-form-info {
+    font-size: 0.875rem;
+  }
+}
+
+/*mobile screen ends */
+
 /* login section end */
 
 

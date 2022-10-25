@@ -82,7 +82,7 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
         <h1 className="header-header">Supercharge your Content Marketing</h1>
         <h3 className="header-subheader">
           We've built a simple <span>growth marketing suite</span> so you can
-          improve <br /> website traffic with valuable insights and guidance.
+          improve <br className="header-subheader-br" /> website traffic with valuable insights and guidance.
         </h3>
         {error && <ErrorMessage error={error} />}
         <div className="header-url-sec">
