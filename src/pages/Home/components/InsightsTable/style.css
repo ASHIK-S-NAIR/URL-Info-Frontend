@@ -88,6 +88,7 @@
   }
 
   .insightsTable-table-mob {
+    width: 100%;
     display: block;
     border: 2px solid rgb(229, 231, 235);
     padding: 2em 1em;
@@ -96,10 +97,13 @@
   }
 
   .insightsTable-table-item {
+    width: 100%;
     border-bottom: 2px solid rgb(229, 231, 235);
+    margin-bottom: 1.2em;
   }
 
   .insightsTable-table-item-sec {
+    width: 100%;
     margin-bottom: 1.8em;
     width: 100%;
   }
@@ -110,19 +114,24 @@
   }
 
   .insightsTable-table-item-ol {
+    width: 100%;
     list-style: none;
   }
 
   .insightsTable-table-item-li {
+    width: 100%;
     margin-bottom: 0.3em;
   }
 
   .insightsTable-table-item-value {
     font-size: 1rem;
+    width: 100%;
   }
 
   .insightsTable-table-item-a {
+    width: 100%;
     font-size: 0.9rem;
+    height: auto;
   }
 
   .insightsTable-table-item-cta-sec{
@@ -132,6 +141,7 @@
   }
 
   .insightsTable-table-item-cta{
+    
     font-size: 0.9rem;
     padding: 0.5em 2em;
   }

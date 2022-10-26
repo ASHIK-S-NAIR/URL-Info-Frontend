@@ -162,7 +162,14 @@ const InsightsTable = ({ insightsArray, loadInsights }) => {
                       Domain Name
                     </h3>
                     <p className="insightsTable-table-item-value">
-                      {insightItem.domainName}
+                      <a
+                        href={insightItem.domainName}
+                        className="insightsTable-table-item-a"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {insightItem.domainName}
+                      </a>
                     </p>
                   </div>
                   <div className="insightsTable-table-item-sec">

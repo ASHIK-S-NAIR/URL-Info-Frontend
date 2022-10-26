@@ -95,6 +95,7 @@
 
 /* tablet screen starts */
 @media screen and (max-width: 768px) {
+
   .header-header {
     font-size: 2.25rem;
     line-height: 2.875rem;
@@ -112,6 +113,14 @@
     width: 100%;
     line-height: 3rem;
     border-radius: 5px;
+  }
+
+  .header-url-form-input.loading {
+    width: 100%;
+  }
+
+  .header-cta-getInsights.loading {
+    width: 100%;
   }
 
   .header-cta-getInsights {
