@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { login, authenticate } from "api/auth";
 import ErrorMessage from "../../components/ErrorMessage";
+import { AuthContext } from "contexts/authContext";
 
 import "./style.css";
-
 
 const Login = () => {
   const [values, setValues] = useState({
@@ -16,6 +16,8 @@ const Login = () => {
   });
 
   const { email, password, error, loading, success } = values;
+
+  const { setUserAuthenticated } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -31,7 +33,6 @@ const Login = () => {
     setValues({ ...values, loading: "loading" });
 
     if (!(email && password)) {
-      console.log("Please fill all the fields");
       return setValues({
         ...values,
         loading: "",
@@ -41,7 +42,6 @@ const Login = () => {
     }
 
     if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      console.log("Please enter a valid email address");
       return setValues({
         ...values,
         loading: "",
@@ -51,7 +51,6 @@ const Login = () => {
     }
 
     if (password.length < 5) {
-      console.log("Password must have atleast 6 characters");
       return setValues({
         ...values,
         loading: "",
@@ -72,6 +71,8 @@ const Login = () => {
         });
       }
       authenticate(data);
+
+      setUserAuthenticated(true);
 
       return navigate("/");
     } catch (error) {

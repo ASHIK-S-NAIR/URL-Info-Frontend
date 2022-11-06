@@ -59,7 +59,7 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
           loading: "",
           success: true,
           error: "",
-        })
+        });
 
         return loadInsights();
       } catch (error) {
@@ -79,10 +79,10 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
     // Header section starts
     <section className="header-section">
       <div className="wrap header-wrap">
-        <h1 className="header-header">Supercharge your Content Marketing</h1>
+        <h1 className="header-header">Know your website SEO for marketing</h1>
         <h3 className="header-subheader">
-          We've built a simple <span>growth marketing suite</span> so you can
-          improve <br className="header-subheader-br" /> website traffic with valuable insights and guidance.
+          Use this tool to get insights about your websites such as word count, <br className="header-subheader-br" /> web URLs,
+          and images. Increase your web traffic using these SEO parameters.
         </h3>
         {error && <ErrorMessage error={error} />}
         <div className="header-url-sec">

@@ -11,9 +11,10 @@
 
 :root{
   /* colors */
-  --linear-gradient: linear-gradient(99deg, rgb(87, 108, 180), rgb(232,100,112));
-  --primary-blue: rgb(87, 108, 180);
-  --primary-purple: rgb(232,100,112);
+  --linear-gradient: linear-gradient(99deg, rgb(62, 25, 110), rgb(212, 108, 118));
+  --primary-blue: rgb(62, 25, 110);
+  --primary-purple: rgb(212, 108, 118);
+  --main-color: #121b67;
 
   /* fonts */
   --primart-font: "Poppins", sans-serif;

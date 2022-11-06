@@ -8,7 +8,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 4.5rem;
-  color: rgb(38, 25, 90);
+  color: var(--main-color);
   text-align: center;
   margin: 0 auto;
   margin-bottom: 0.5em;
@@ -22,36 +22,52 @@
 }
 
 .insightsTable-table {
-  width: 100%;
+  width:100%;
   border-collapse: collapse;
   border: 2px solid rgb(229, 231, 235);
   margin-bottom: 3em;
+  table-layout:fixed; 
+  overflow: hidden;
+  word-break: break-word;
 }
 
 .insightsTable-table-thead {
+  max-width: 100%;
   border-bottom: 2px solid rgb(229, 231, 235);
 }
 
 .insightsTable-table-head-value {
+  max-width: 100%;
   font-weight: 700;
-  color: rgb(232, 100, 112);
+  color: rgb(212, 108, 118);
+  border-right: 1px solid rgb(231, 232, 235);
   font-size: 1rem;
   text-align: left;
+  padding-left: 0.3em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
 
+.insightsTable-table-tbody{
+  max-width: 100%;
+}
+
 .insightsTable-table-body-value {
+  text-align: start;
   font-weight: 400;
-  color: rgb(13, 12, 12);
+  color: var(--main-color);
+  padding-left: 0.3em;
   font-size: 0.75rem;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
   border-bottom: 1px solid rgb(231, 232, 235);
+  border-right: 1px solid rgb(231, 232, 235);
+  padding-top: 1em;
+  vertical-align:top
 }
 
 .insightsTable-table-body-li {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   margin-top: 0.5em;
 }
 
@@ -73,7 +89,7 @@
   padding-bottom: 0.4em;
 }
 
-.insightsTable-table-mob{
+.insightsTable-table-mob {
   display: none;
 }
 
@@ -83,7 +99,7 @@
     padding-top: 0em;
   }
 
-  .insightsTable-table{
+  .insightsTable-table {
     display: none;
   }
 
@@ -94,6 +110,7 @@
     padding: 2em 1em;
     border-radius: 5px;
     background-color: rgb(248, 248, 251);
+    word-break: break-word;
   }
 
   .insightsTable-table-item {
@@ -134,14 +151,13 @@
     height: auto;
   }
 
-  .insightsTable-table-item-cta-sec{
+  .insightsTable-table-item-cta-sec {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
   }
 
-  .insightsTable-table-item-cta{
-    
+  .insightsTable-table-item-cta {
     font-size: 0.9rem;
     padding: 0.5em 2em;
   }

@@ -1,19 +1,22 @@
-import React, { useState } from "react";
-import { isAuthenticated } from "api/auth";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import AuthenticatedUsers from "./Components/AuthenticatedUsers";
 import NonAuthenticatedUsers from "./Components/NonAuthenticatedUsers";
 import LogoSvg from "../../../assets/logo/logo.svg";
+import { AuthContext } from "contexts/authContext";
 import "./style.css";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
+  const {userAuthenticated} = useContext(AuthContext);
+
+
   return (
     // Nav section starts
     <nav
       className={`nav-section ${toggle === true ? "nav-section-black-bg" : ""}`}
-      onClick={toggle === true ? () => setToggle(!toggle) : ""}
+      onClick={toggle === true ? () => setToggle(!toggle) : null}
     >
       <div className="wrap nav-wrap">
         <div className="nav-logo-sec">
@@ -22,15 +25,15 @@ const Nav = () => {
           </Link>
           <div className="nav-logo-info">
             <Link to="/">
-              <h1 className="nav-logo-h1">SuiteJar</h1>
+              <h1 className="nav-logo-h1">OptEngine</h1>
             </Link>
-            <a href="https://growth.cx/" className="nav-logo-a">
-              by <span>growth.cx</span>
+            <a href="https://ashiksudhakaran.com" className="nav-logo-a">
+              by <span>Ashik Sudhakaran</span>
             </a>
           </div>
         </div>
 
-        {isAuthenticated() ? (
+        {userAuthenticated ? (
           <AuthenticatedUsers responsive={false} />
         ) : (
           <NonAuthenticatedUsers responsive={false} />
@@ -43,7 +46,7 @@ const Nav = () => {
       </div>
       {toggle && (
         <div className="wrap nav-wrap nav-wrap-responsive" onClick={() => setToggle(!toggle)}>
-          {isAuthenticated() ? (
+          {userAuthenticated ? (
             <AuthenticatedUsers responsive={true} />
           ) : (
             <NonAuthenticatedUsers responsive={true} />
