@@ -90,7 +90,7 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
             <input
               type="text"
               className="header-url-form-input"
-              placeholder="Put your website URL here. Eg.www.growth.cx"
+              placeholder="Put your website URL here"
               value={url}
               onChange={handleChange("url")}
             />
