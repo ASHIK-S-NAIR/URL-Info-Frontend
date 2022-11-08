@@ -16,9 +16,6 @@ const Footer = () => {
             <Link to="/">
               <h1 className="footer-logo-h1">OptEngine</h1>
             </Link>
-            <a href="https://ashiksudhakaran.com" className="footer-logo-a">
-              by <span>Ashik Sudhakaran</span>
-            </a>
           </div>
         </div>
         <h3 className="footer-h3">Enjoy your free SEO Tool</h3>

@@ -66,7 +66,7 @@ const InsightsTable = ({ insightsArray, loadInsights }) => {
               insightsArray.insights.map((insightItem, index) => {
                 return (
                   <tr key={index}>
-                    <td className="insightsTable-table-body-value">
+                    <td className="insightsTable-table-body-value" >
                       <a
                         href={insightItem.domainName}
                         className="insightsTable-table-body-a"

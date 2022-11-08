@@ -11,13 +11,19 @@
 
 :root{
   /* colors */
-  --linear-gradient: linear-gradient(99deg, rgb(62, 25, 110), rgb(212, 108, 118));
+  /* --linear-gradient: linear-gradient(99deg, rgb(62, 25, 110), rgb(212, 108, 118));
   --primary-blue: rgb(62, 25, 110);
   --primary-purple: rgb(212, 108, 118);
-  --main-color: #121b67;
+  --main-color: #121b67; */
+
+  --linear-gradient: linear-gradient(99deg, rgb(2, 46, 31), rgb(7, 51, 36));
+  --primary-blue: rgb(2,46,31);
+  --primary-purple: #073324;
+  --main-color: #26781f;
 
   /* fonts */
-  --primart-font: "Poppins", sans-serif;
+  /* --primart-font: "Poppins", sans-serif; */
+  --primart-font: 'Noto Sans', sans-serif;
   --secondary-font: 'Roboto', sans-serif;
 }
 

@@ -27,9 +27,6 @@ const Nav = () => {
             <Link to="/">
               <h1 className="nav-logo-h1">OptEngine</h1>
             </Link>
-            <a href="https://ashiksudhakaran.com" className="nav-logo-a">
-              by <span>Ashik Sudhakaran</span>
-            </a>
           </div>
         </div>
 

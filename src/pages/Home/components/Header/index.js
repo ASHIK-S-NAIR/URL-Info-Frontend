@@ -87,6 +87,15 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
         {error && <ErrorMessage error={error} />}
         <div className="header-url-sec">
           <form className="header-url-form">
+          <button
+              className={`btn-cta header-cta-getInsights ${
+                loading ? "loading" : ""
+              }`}
+              onClick={onSubmit}
+            >
+              Get Info
+              {loading && <Loading />}
+            </button>
             <input
               type="text"
               className="header-url-form-input"
@@ -94,20 +103,10 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
               value={url}
               onChange={handleChange("url")}
             />
-            <button
-              className={`btn-cta header-cta-getInsights ${
-                loading ? "loading" : ""
-              }`}
-              onClick={onSubmit}
-            >
-              Get insights
-              {loading && <Loading />}
-            </button>
           </form>
         </div>
         <ul className="header-features-ul">
-          <li className="header-features-li">It's 100% Free!</li>
-          <li className="header-features-li">No credit card required</li>
+          <li className="header-features-li">It's completely Free!</li>
         </ul>
       </div>
     </section>

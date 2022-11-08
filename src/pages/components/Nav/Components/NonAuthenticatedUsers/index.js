@@ -24,7 +24,7 @@ const NonAuthenticatedUsers = ({ responsive }) => {
             responsive === true ? "btn-cta-responsive" : ""
           }`}
         >
-          Sign up - <span>its free</span>
+          Sign up
         </button>
       </Link>
     </div>

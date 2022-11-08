@@ -115,10 +115,6 @@ const Signup = () => {
             value={password}
             onChange={handleChange("password")}
           />
-          <p className="signup-form-info">
-            By creating an account, you agree to the privacy policy and{" "}
-            <span>terms of service. </span>
-          </p>
           <button className="btn-cta signup-form-cta" onClick={onSubmit}>
             Sign up
           </button>

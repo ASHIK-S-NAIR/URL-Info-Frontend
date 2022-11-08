@@ -22,7 +22,7 @@ const AuthenticatedUsers = ({ responsive }) => {
       }`}
     >
       <button
-        className="btn-cta btn-cta-outline nav-cta-login"
+        className="btn-cta btn-cta-outline nav-cta-logout"
         onClick={clickLogout}
       >
         Log out

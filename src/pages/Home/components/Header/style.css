@@ -3,6 +3,7 @@
 .header-section {
   min-height: 100vh;
   margin-bottom: 3em;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='25' height='25' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(160, 0%, 100%, 1)'/><path d='M25 30a5 5 0 110-10 5 5 0 010 10zm0-25a5 5 0 110-10 5 5 0 010 10zM0 30a5 5 0 110-10 5 5 0 010 10zM0 5A5 5 0 110-5 5 5 0 010 5zm12.5 12.5a5 5 0 110-10 5 5 0 010 10z'  stroke-width='1' stroke='hsla(115, 59%, 30%, 0.13)' fill='none'/><path d='M0 15a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm25 0a2.5 2.5 0 110-5 2.5 2.5 0 010 5zM12.5 2.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm0 25a2.5 2.5 0 110-5 2.5 2.5 0 010 5z'  stroke-width='1' stroke='hsla(160, 88%, 10%, 0.09)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
 }
 
 .header-wrap {
@@ -24,7 +25,7 @@
 .header-subheader {
   font-size: 1.125rem;
   font-weight: 400;
-  color: rgb(89, 89, 89);
+  color: rgb(82, 86, 83);
   line-height: 1.75rem;
   text-align: center;
   margin: 0 auto;
@@ -68,7 +69,7 @@
 
 .header-cta-getInsights {
   width: 25%;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px 0px 0px 5px;
   font-size: 1.1rem;
   display: flex;
   justify-content: space-between;
@@ -95,7 +96,6 @@
 
 /* tablet screen starts */
 @media screen and (max-width: 768px) {
-
   .header-header {
     font-size: 2.25rem;
     line-height: 2.875rem;
@@ -135,17 +135,16 @@
 /* mobile screen ends */
 
 @media screen and (max-width: 500px) {
-
-  .header-wrap{
+  .header-wrap {
     padding-top: 15em;
   }
 
-  .header-header{
+  .header-header {
     width: 100%;
     margin-bottom: 1.2em;
   }
 
-  .header-subheader-br{
+  .header-subheader-br {
     display: none;
   }
 
@@ -153,14 +152,13 @@
     width: 100%;
   }
 
-  .header-url-form-input{
+  .header-url-form-input {
     padding-left: 0.8em;
   }
 
-  .header-features-li{
+  .header-features-li {
     font-size: 0.875rem;
   }
-
 }
 
 /*mobile screen ends */

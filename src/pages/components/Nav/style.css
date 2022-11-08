@@ -28,7 +28,7 @@
 }
 
 .nav-logo-h1 {
-  color: rgb(87, 108, 180);
+  color: var(--primary-purple);
   font-size: 1.625rem;
   font-weight: 700;
   line-height: 1rem;
@@ -52,6 +52,14 @@
 
 .nav-cta-signup span {
   font-size: 0.9rem;
+}
+
+.nav-cta-login{
+  border: none;
+}
+
+.nav-cta-logout{
+  border: none;
 }
 
 .nav-cta-section-responsive {
