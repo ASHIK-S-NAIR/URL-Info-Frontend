@@ -99,7 +99,7 @@ const Header = ({ urlValues, setUrlValues, loadInsights }) => {
             <input
               type="text"
               className="header-url-form-input"
-              placeholder="Put your website URL here"
+              placeholder="Enter your website URL here"
               value={url}
               onChange={handleChange("url")}
             />
